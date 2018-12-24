@@ -129,7 +129,16 @@
   </section>
 </template>
 <script>
+  import {mapState} from 'vuex'
+  import ShopList from '../../components/ShopList/ShopList.vue'
   export default {
+    mounted () {
+      // 异步获取商家列表数据(后台==>state)
+      this.$store.dispatch('getShops')
+    },
+    computed: {
+      ...mapState(['address'])
+    },
     components:{
       ShopList
     }

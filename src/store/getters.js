@@ -1,3 +1,8 @@
 /**
- * Created by Administrator on 2018/12/22.
+ * 包含n个getter计算属性方法的对象
  */
+
+export default {
+
+}
+

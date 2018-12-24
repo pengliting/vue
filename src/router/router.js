@@ -1,26 +1,44 @@
 
 import MSite from '../pages/MSite/MSite.vue'
-import search from '../pages/Search/search.vue'
+import Search from '../pages/Search/Search.vue'
+import Order from '../pages/Order/Order.vue'
 import Profile from '../pages/Profile/Profile.vue'
-import Orges from '../pages/Orges/Orges.vue'
+import Login from '../pages/Login/Login.vue'
 
 export default [
   {
-    path: '/meste',
-    component: MSite
+    path: '/msite',
+    component: MSite,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/search',
-    component: search
+    component: Search,
+    meta: {
+      showFooter: true
+    }
   },
   {
-    path: '/orges',
-    component: Orges
+    path: '/order',
+    component: Order,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/profile',
-    component: Profile
+    component: Profile,
+    meta: {
+      showFooter: true
+    }
   },
+  {
+    path: '/login',
+    component: Login
+  },
+
   {
     path: '/',
     redirect: '/msite'

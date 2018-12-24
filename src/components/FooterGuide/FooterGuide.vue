@@ -27,7 +27,14 @@
   </footer>
 </template>
 <script>
-    export default {}
+   //编程式导航
+    export default {
+       methods : {
+           goTo(path){
+             this.$router.replace(path)
+           }
+       }
+    }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixins.styl"
