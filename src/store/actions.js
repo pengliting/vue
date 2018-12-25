@@ -3,8 +3,8 @@
  */
 import {
   reqAddress,
-  reqCategorys,
-  reqShops
+  reqShops,
+  reqCategorys
 } from '../api'
 
 import {
@@ -26,12 +26,11 @@ export default {
     }
   },
   // 异步获食品分类列表
-  async reqCategorys ({state}){
-     const {longitude,latitude} = state
-     const result = await reqCategorys(longitude,latitude)
+  async getCategorys({commit}) {
+    const result = await reqCategorys()
     if (result.code === 0) {
-      const categorys  = result.data
-      commit(RECEIVE_CATEGORYS, {categorys })
+      const categorys = result.data
+      commit(RECEIVE_CATEGORYS, {categorys})
     }
   },
   // 异步获取商家列表

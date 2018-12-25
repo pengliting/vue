@@ -11,6 +11,7 @@
   export default {
     methods () {
       this.$store.dispatch('getAddress')
+      this.$store.dispatch('getUser')
     },
     components: {
       FooterGuide
@@ -19,4 +20,5 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+
 </style>

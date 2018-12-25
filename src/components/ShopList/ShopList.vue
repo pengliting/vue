@@ -60,7 +60,7 @@
     export default {
        data () {
            return {
-              baseImgUrl: 'https://fuss10.elemecdn.com'
+             baseImgUrl: 'https://fuss10.elemecdn.com'
            }
        },
       computed: {
